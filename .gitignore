@@ -1,0 +1,21 @@
+# Data never enters git (see data/README.md)
+data/raw/
+data/processed/
+results/*
+!results/figures/
+!results/figures/**
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.env
+.env.*
+
+# OS / editors
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/

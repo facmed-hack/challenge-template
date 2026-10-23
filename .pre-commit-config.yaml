@@ -1,0 +1,25 @@
+# Install once per clone: pip install pre-commit && pre-commit install
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=1024]
+      - id: check-merge-conflict
+      - id: detect-private-key
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.7.1
+    hooks:
+      - id: nbstripout
+  - repo: local
+    hooks:
+      - id: no-data-files
+        name: No data files outside examples/ (see data/README.md)
+        language: fail
+        entry: Data files belong outside git; put a synthetic sample in examples/ instead
+        files: '\.(csv|tsv|xlsx?|parquet|feather|h5|hdf5|mat|npy|npz|pkl|pickle|edf|bdf|fif|set|vhdr|eeg|xdf|nii|nii\.gz|dcm|mp4|mov|avi|mkv|wav|mp3|flac|m4a)$'
+        exclude: '^examples/'

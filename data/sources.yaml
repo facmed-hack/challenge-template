@@ -1,0 +1,12 @@
+# Where this challenge's data lives. NEVER commit the data itself.
+# kind: open | on-request | collected-on-day | anonymised-lab | synthetic | hpe-mounted
+# status: proposed | confirmed | available | dropped
+- name: TODO
+  kind: open
+  url: TODO        # landing page or DOI
+  licence: TODO
+  access: TODO     # how to get it: download, request form, ask the runner
+  location: TODO   # e.g. /data/<challenge>/<name> on HPE, or data/raw/<name>
+  contact: TODO    # runner or provider
+  status: proposed
+  notes: ""
